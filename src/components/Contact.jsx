@@ -1,0 +1,50 @@
+import React from 'react';
+import { Mail, MapPin, Phone } from 'lucide-react';
+import { GitHub as GitHubIcon } from '@mui/icons-material';
+import './Contact.css';
+
+const Contact = () => {
+  return (
+    <section id="contact" className="section">
+      <h2 className="section-title">Let's <span className="gradient-text">Connect</span></h2>
+      <div className="contact-grid">
+        <div className="contact-info glass">
+          <h3>Get in Touch</h3>
+          <p className="contact-description">
+            Looking for a reliable Laravel developer? Let's discuss how we can work together.
+          </p>
+          <div className="contact-methods">
+            <div className="method">
+              <Mail className="method-icon" size={24} />
+              <div>
+                <h4>Email</h4>
+                <p>arkarmoemyint3456@gmail.com</p>
+              </div>
+            </div>
+            <div className="method">
+              <MapPin className="method-icon" size={24} />
+              <div>
+                <h4>Location</h4>
+                <p>Yangon, Myanmar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="contact-ctas">
+          <a href="mailto:arkarmoemyint3456@gmail.com" className="cta-link cta-link--primary">
+            <Mail size={20} /> Email Me
+          </a>
+          <a href="https://wa.me/95988817910" target="_blank" rel="noopener noreferrer" className="cta-link">
+            <Phone size={20} /> WhatsApp
+          </a>
+          <a href="https://github.com/ArKar-PlayBoy" target="_blank" rel="noopener noreferrer" className="cta-link">
+            <GitHubIcon sx={{ fontSize: 20 }} /> GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
