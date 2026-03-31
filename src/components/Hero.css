@@ -123,6 +123,15 @@
   font-size: var(--text-lg);
 }
 
+@media (max-width: 1024px) {
+  .hero-portrait-img {
+    width: 160px;
+  }
+  .hero-split {
+    gap: var(--space-8);
+  }
+}
+
 @media (max-width: 768px) {
   .hero-split {
     flex-direction: column;
@@ -141,7 +150,7 @@
     order: -1;
   }
   .hero-portrait-img {
-    width: 160px;
+    width: 140px;
   }
   .title {
     font-size: 2.5rem;
@@ -156,6 +165,6 @@
     font-size: 2rem;
   }
   .hero-portrait-img {
-    width: 140px;
+    width: 120px;
   }
 }

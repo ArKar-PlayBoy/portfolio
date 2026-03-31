@@ -114,6 +114,20 @@ ul {
   scroll-margin-top: 92px;
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1.5rem;
+    scroll-margin-top: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 1rem;
+    scroll-margin-top: 64px;
+  }
+}
+
 .section-title {
   font-size: var(--text-4xl);
   margin-bottom: var(--space-12);
@@ -150,4 +164,16 @@ ul {
 
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .app {
+    animation: none;
+  }
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }

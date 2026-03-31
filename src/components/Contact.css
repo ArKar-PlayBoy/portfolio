@@ -91,3 +91,15 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 576px) {
+  .contact-info {
+    padding: var(--space-8);
+  }
+  .contact-ctas {
+    padding: var(--space-8);
+  }
+  .contact-description {
+    margin-bottom: var(--space-8);
+  }
+}

@@ -1,6 +1,6 @@
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: var(--space-10);
 }
 
@@ -112,6 +112,12 @@
   .projects-grid {
     grid-template-columns: 1fr;
     gap: var(--space-8);
+  }
+}
+
+@media (max-width: 576px) {
+  .project-info {
+    padding: var(--space-6);
   }
 }
 

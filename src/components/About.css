@@ -79,6 +79,12 @@
   .skills-grid {
     grid-template-columns: 1fr;
   }
+  .tech-group {
+    min-width: auto;
+  }
+  .about-text {
+    padding: var(--space-8);
+  }
 }
 
 /* Tech Stack */

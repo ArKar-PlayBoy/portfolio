@@ -1,6 +1,6 @@
 import React from 'react';
-import { Mail, MapPin, Phone } from 'lucide-react';
-import { GitHub as GitHubIcon, Telegram, Instagram } from '@mui/icons-material';
+import { Mail, MapPin } from 'lucide-react';
+import { GitHub as GitHubIcon, Telegram, Instagram,LinkedIn } from '@mui/icons-material';
 import './Contact.css';
 
 const Contact = () => {
@@ -35,9 +35,11 @@ const Contact = () => {
           <a href="mailto:arkarmoemyint3456@gmail.com" className="cta-link cta-link--primary">
             <Mail size={20} /> Email Me
           </a>
-          <a href="https://wa.me/95988817910" target="_blank" rel="noopener noreferrer" className="cta-link">
-            <Phone size={20} /> WhatsApp
+        
+           <a href="https://www.linkedin.com/in/ar-kar-moe-myint" target="_blank" rel="noopener noreferrer" className="cta-link">
+            <LinkedIn sx={{ fontSize: 20 }} /> LinkedIn
           </a>
+
           <a href="https://github.com/ArKar-PlayBoy" target="_blank" rel="noopener noreferrer" className="cta-link">
             <GitHubIcon sx={{ fontSize: 20 }} /> GitHub
           </a>

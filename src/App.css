@@ -2,6 +2,7 @@
   min-height: 100vh;
   position: relative;
   z-index: 1;
+  animation: appFadeIn 0.3s ease-out;
 }
 
 .background-glow {
@@ -22,4 +23,9 @@
   color: var(--text-secondary);
   border-top: 1px solid var(--glass-border);
   background: var(--bg-secondary);
+}
+
+@keyframes appFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
