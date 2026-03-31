@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
-import { GitHub as GitHubIcon } from '@mui/icons-material';
+import { GitHub as GitHubIcon, Telegram, Instagram } from '@mui/icons-material';
 import './Contact.css';
 
 const Contact = () => {
@@ -40,6 +40,14 @@ const Contact = () => {
           </a>
           <a href="https://github.com/ArKar-PlayBoy" target="_blank" rel="noopener noreferrer" className="cta-link">
             <GitHubIcon sx={{ fontSize: 20 }} /> GitHub
+          </a>
+
+          <a href="https://t.me/champagnepapi223" target="_blank" rel="noopener noreferrer" className="cta-link">
+            <Telegram sx={{ fontSize: 20 }} /> Telegram
+          </a>
+          
+          <a href="https://instagram.com/call_me_moranttt" target="_blank" rel="noopener noreferrer" className="cta-link">
+            <Instagram sx={{ fontSize: 20 }} /> Instagram
           </a>
         </div>
       </div>

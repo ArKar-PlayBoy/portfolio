@@ -5,7 +5,7 @@ const Education = () => {
   const educationItems = [
     {
       degree: 'Third Year English',
-      school: 'University of Meiktila',
+      school: 'University of Meikhtila',
       year: '2023-2025',
     },
     {
