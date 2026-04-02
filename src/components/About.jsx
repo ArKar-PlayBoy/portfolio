@@ -5,7 +5,7 @@ import './About.css';
 const About = () => {
   const skills = [
     { name: 'Frontend Excellence', icon: <Code2 size={40}/>, description: 'React(Vite), Vue, and modern CSS frameworks building responsive, accessible UIs.' },
-    { name: 'Backend Architecture', icon: <Database size={40}/>, description: 'Laravel, REST API, and MySQL Database Design optimized for scalability.' },
+    { name: 'Backend Architecture', icon: <Database size={40}/>, description: 'Laravel, RESTful API, and MySQL Database Design optimized for scalability.' },
     { name: 'Modern Tooling', icon: <Terminal size={40}/>, description: 'Git, GitHub, Docker, CI/CD, and mastering the modern web ecosystem.' },
     { name: 'Product UI Implementation', icon: <Layers size={40}/>, description: 'Translating design intent into stable, component-based frontend interfaces in React.' },
   ];
