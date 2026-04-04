@@ -11,7 +11,7 @@ const About = () => {
   ];
 
   const techGroups = [
-    { group: "Frontend", items: ["React(Vite)", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS"] },
+    { group: "Frontend", items: ["React(Vite)", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap"] },
     { group: "Backend", items: ["Laravel", "PHP", "MySQL"] },
     { group: "Tools", items: ["Git", "GitHub", "Docker", "VSCode"] },
   ];
