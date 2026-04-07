@@ -10,7 +10,7 @@ const Projects = () => {
       category: 'Full-Stack',
       problem: 'Cafe operations were fragmented across manual ordering, reservations, inventory, and payment verification, causing delays and weak cost visibility.',
       built: 'Built a Laravel 12 platform with multi-guard RBAC (admin/staff/customer), Google OAuth login, AI drink recommendations (weather, mood, time), Stripe/KBZ/COD payments, FIFO inventory, menu cost-profit analysis, and comprehensive security (CSRF, rate limiting, IDOR protection, security headers, audit logging, ban system).',
-      outcome: 'Unified ordering, payment, and stock workflows and inventory in one system with real-time cost insights.',
+      outcome: 'Unified ordering, payment, and stock workflows with real-time cost insights, plus secure Google OAuth login and robust security protections (ban system, rate limiting, audit logging).',
       repoUrl: 'https://github.com/ArKar-PlayBoy/cafe-web-application',
       tags: ['Laravel', 'Tailwind CSS', 'Alpine.js', 'Stripe', 'Google OAuth', 'Security'],
     },
