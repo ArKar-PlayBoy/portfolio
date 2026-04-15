@@ -1,20 +1,82 @@
 import React from 'react';
-import { Layers, Terminal, Database, Code2 } from 'lucide-react';
+import { Chip } from '@mui/material';
+import { 
+  SiHtml5, SiCss, SiJavascript, SiTypescript, 
+  SiReact, SiTailwindcss, SiBootstrap, 
+  SiPhp, SiLaravel, SiMysql,
+  SiGit, SiGithub, SiDocker 
+} from 'react-icons/si';
+import { Code2, Layers, Terminal, Database } from 'lucide-react';
 import './About.css';
 
 const About = () => {
   const skills = [
-    { name: 'Frontend Excellence', icon: <Code2 size={40}/>, description: 'React(Vite), Vue, and modern CSS frameworks building responsive, accessible UIs.' },
-    { name: 'Backend Architecture', icon: <Database size={40}/>, description: 'Laravel, RESTful API, and MySQL Database Design optimized for scalability.' },
-    { name: 'Modern Tooling', icon: <Terminal size={40}/>, description: 'Git, GitHub, Docker, CI/CD, and mastering the modern web ecosystem.' },
-    { name: 'Product UI Implementation', icon: <Layers size={40}/>, description: 'Translating design intent into stable, component-based frontend interfaces in React.' },
+    { name: 'Frontend Delivery', icon: <Code2 size={40} />, description: 'Building responsive, accessible interfaces in React with practical component structure.' },
+    { name: 'Backend Architecture', icon: <Database size={40} />, description: 'Designing Laravel systems, REST APIs, and MySQL schemas focused on clarity and scale.' },
+    { name: 'Engineering Workflow', icon: <Terminal size={40} />, description: 'Using Git, GitHub, Docker, and CI/CD practices to ship maintainable software.' },
+    { name: 'Product UI Implementation', icon: <Layers size={40} />, description: 'Translating product requirements into stable, reusable frontend implementations.' },
   ];
 
   const techGroups = [
-    { group: "Frontend", items: ["React(Vite)", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap"] },
-    { group: "Backend", items: ["Laravel", "PHP", "MySQL"] },
-    { group: "Tools", items: ["Git", "GitHub", "Docker", "VSCode"] },
+    {
+      group: 'Frontend',
+      items: ['React(Vite)', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Tailwind CSS', 'Bootstrap'],
+    },
+    {
+      group: 'Backend',
+      items: ['PHP', 'Laravel', 'MySQL'],
+    },
+    {
+      group: 'Tools',
+      items: ['Git', 'GitHub', 'Docker', 'VSCode'],
+    },
   ];
+
+  const techItemIcons = {
+    'React(Vite)': SiReact,
+    JavaScript: SiJavascript,
+    TypeScript: SiTypescript,
+    HTML: SiHtml5,
+    CSS: SiCss,
+    'Tailwind CSS': SiTailwindcss,
+    Bootstrap: SiBootstrap,
+    PHP: SiPhp,
+    Laravel: SiLaravel,
+    MySQL: SiMysql,
+    Git: SiGit,
+    GitHub: SiGithub,
+    Docker: SiDocker,
+    VSCode: Code2,
+  };
+
+  const techChipSx = {
+    color: 'var(--text-primary)',
+    backgroundColor: 'var(--glass-bg)',
+    border: '1px solid var(--glass-border)',
+    borderRadius: 'var(--radius-full)',
+    height: 'auto',
+    maxWidth: '100%',
+    '&:hover': {
+      borderColor: 'var(--accent-primary)',
+    },
+    '& .MuiChip-icon': {
+      color: 'var(--accent-primary)',
+      marginLeft: 'var(--space-3)',
+      marginRight: '-4px',
+      transition: 'color 0.2s ease',
+    },
+    '&:hover .MuiChip-icon': {
+      color: 'var(--accent-primary)',
+    },
+    '& .MuiChip-label': {
+      fontSize: 'var(--text-sm)',
+      fontWeight: 500,
+      whiteSpace: 'normal',
+      overflow: 'visible',
+      textOverflow: 'clip',
+      padding: 'var(--space-2) var(--space-4)',
+    },
+  };
 
   return (
     <section id="about" className="section">
@@ -22,11 +84,10 @@ const About = () => {
       <div className="about-grid">
         <div className="about-text glass">
           <p>
-            I focus on backend-first full-stack development, especially Laravel systems that need clear workflows, role permissions, and maintainable code.
+            I focus on backend-first full-stack development, especially Laravel applications that need clear workflows, role permissions, and maintainable code.
           </p>
-          <br/>
           <p>
-            My work covers API design, database modeling, admin tooling, and practical frontend implementation in React. I aim for software that is stable, readable, and ready for real users.
+            My work covers API design, database modeling, admin tooling, and practical React implementation. I prioritize software that teams can ship and maintain with confidence.
           </p>
         </div>
         <div className="skills-grid">
@@ -47,9 +108,18 @@ const About = () => {
             <div className="tech-group" key={i}>
               <h4 className="tech-group-label">{group.group}</h4>
               <div className="tech-group-items">
-                {group.items.map((item, j) => (
-                  <span className="tech-chip" key={j}>{item}</span>
-                ))}
+                {group.items.map((item, j) => {
+                  const IconComponent = techItemIcons[item] || Code2;
+                  return (
+                    <Chip
+                      key={j}
+                      label={item}
+                      icon={<IconComponent size={16} />}
+                      size="small"
+                      sx={techChipSx}
+                    />
+                  );
+                })}
               </div>
             </div>
           ))}

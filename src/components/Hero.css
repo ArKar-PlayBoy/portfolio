@@ -14,7 +14,7 @@
   max-width: 1000px;
   text-align: center;
   z-index: 2;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: flex;
   align-items: center;
   gap: var(--space-10);
@@ -26,13 +26,30 @@
   text-align: left;
 }
 
+.role-line {
+  font-size: var(--text-base);
+  color: var(--accent-primary);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+  opacity: 0;
+}
+
+.hero-cred {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  max-width: 580px;
+  line-height: 1.7;
+  margin: 0 0 var(--space-6);
+  opacity: 0;
+}
+
 
 .title {
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
   font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: var(--space-6);
-  letter-spacing: -2px;
+  line-height: 1.15;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.5px;
   opacity: 0;
 }
 
@@ -40,7 +57,7 @@
   font-size: var(--text-xl);
   color: var(--text-secondary);
   max-width: 600px;
-  margin: 0 0 var(--space-8);
+  margin: 0 0 var(--space-4);
   line-height: 1.8;
   opacity: 0;
 }
@@ -106,7 +123,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-4);
-  margin-top: var(--space-10);
+  margin-top: var(--space-4);
   z-index: 2;
   flex-wrap: wrap;
   opacity: 0;
@@ -118,7 +135,7 @@
   font-weight: 500;
 }
 
-.proof-dot {
+.proof-divider {
   color: var(--accent-primary);
   font-size: var(--text-lg);
 }
@@ -151,6 +168,10 @@
     flex-direction: column;
     align-items: stretch;
   }
+  .hero-cred {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .hero-portrait {
     order: -1;
   }
@@ -173,5 +194,25 @@
   }
   .hero-portrait-img {
     width: 120px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    min-height: 84vh;
+  }
+  .hero-split {
+    max-width: 1120px;
+    margin-top: var(--space-2);
+  }
+  .hero-text {
+    max-width: 620px;
+  }
+  .hero-portrait-img {
+    width: 200px;
+  }
+  .description {
+    line-height: 1.65;
+    max-width: 580px;
   }
 }

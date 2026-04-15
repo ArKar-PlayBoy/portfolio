@@ -134,6 +134,16 @@ ul {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+
+  .section-title {
+    margin-bottom: var(--space-10);
+  }
+}
+
 /* Focus visible */
 :focus-visible {
   outline: none;
