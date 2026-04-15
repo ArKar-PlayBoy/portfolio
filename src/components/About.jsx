@@ -20,7 +20,7 @@ const About = () => {
   const techGroups = [
     {
       group: 'Frontend',
-      items: ['React(Vite)', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Tailwind CSS', 'Bootstrap'],
+      items: ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Tailwind CSS', 'Bootstrap'],
     },
     {
       group: 'Backend',
@@ -33,7 +33,7 @@ const About = () => {
   ];
 
   const techItemIcons = {
-    'React(Vite)': SiReact,
+    'React': SiReact,
     JavaScript: SiJavascript,
     TypeScript: SiTypescript,
     HTML: SiHtml5,
