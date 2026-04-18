@@ -161,4 +161,6 @@
   .tech-group-items {
     justify-content: center;
   }
+
+  .tech-group-label { justify-content: center; }
 }
