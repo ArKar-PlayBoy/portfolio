@@ -1,5 +1,6 @@
 import React from 'react';
 import { GitHub as GitHubIcon } from '@mui/icons-material';
+import { ScrollReveal } from '../hooks/useScrollReveal';
 import './Projects.css';
 
 const Projects = () => {
@@ -48,38 +49,42 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section">
-      <h2 className="section-title">Case <span className="gradient-text">Studies</span></h2>
+      <h2 className="section-title">
+        <ScrollReveal>Case <span className="gradient-text">Studies</span></ScrollReveal>
+      </h2>
       <div className="projects-grid">
-        {portfolioItems.map((item) => (
-          <div className="project-card glass" key={item.id}>
-            <div className="project-info">
-              <span className="project-category">{item.category}</span>
-              <h3>{item.title}</h3>
-              <span className="project-label">Problem</span>
-              <p>{item.problem}</p>
-              <span className="project-label">What I built</span>
-              <p>{item.built}</p>
-              <span className="project-label">Outcome</span>
-              <p>{item.outcome}</p>
-              {item.tags && item.tags.length > 0 && (
-                <div className="project-tags">
-                  {item.tags.map((tag, i) => (
-                    <span className="tag" key={i}>{tag}</span>
-                  ))}
+        {portfolioItems.map((item, index) => (
+          <ScrollReveal key={item.id} delay={index * 150}>
+            <div className="project-card glass">
+              <div className="project-info">
+                <span className="project-category">{item.category}</span>
+                <h3>{item.title}</h3>
+                <span className="project-label">Problem</span>
+                <p>{item.problem}</p>
+                <span className="project-label">What I built</span>
+                <p>{item.built}</p>
+                <span className="project-label">Outcome</span>
+                <p>{item.outcome}</p>
+                {item.tags && item.tags.length > 0 && (
+                  <div className="project-tags">
+                    {item.tags.map((tag, i) => (
+                      <span className="tag" key={i}>{tag}</span>
+                    ))}
+                  </div>
+                )}
+                <div className="project-cta">
+                  <a
+                    href={item.repoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cta-btn cta-btn--primary"
+                  >
+                    <GitHubIcon sx={{ fontSize: 16 }} /> Repo
+                  </a>
                 </div>
-              )}
-              <div className="project-cta">
-                <a
-                  href={item.repoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cta-btn cta-btn--primary"
-                >
-                  <GitHubIcon sx={{ fontSize: 16 }} /> Repo
-                </a>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         ))}
       </div>
     </section>

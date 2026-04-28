@@ -5,14 +5,14 @@
   width: 100%;
   z-index: 1000;
   transition: all 0.3s ease;
-  padding: var(--space-6) 0;
+  padding: var(--space-4) 0;
 }
 
 .nav-backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
@@ -120,12 +120,19 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: var(--space-3) 0;
+  }
+  .nav-container {
+    padding: 0 var(--space-4);
+  }
   .nav-links {
     position: fixed;
     top: 0;
     right: -100%;
     width: 70%;
     height: 100vh;
+    height: 100dvh;
     background: var(--bg-secondary);
     flex-direction: column;
     justify-content: center;
@@ -146,5 +153,17 @@
   .mobile-menu-btn {
     display: block;
     z-index: 1002;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    padding: var(--space-2) 0;
+  }
+  .logo {
+    font-size: var(--text-xl);
+  }
+  .nav-container {
+    padding: 0 var(--space-3);
   }
 }

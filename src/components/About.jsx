@@ -7,6 +7,7 @@ import {
   SiGit, SiGithub, SiDocker 
 } from 'react-icons/si';
 import { Code2, Layers, Terminal, Database } from 'lucide-react';
+import { ScrollReveal } from '../hooks/useScrollReveal';
 import './About.css';
 
 const About = () => {
@@ -80,48 +81,58 @@ const About = () => {
 
   return (
     <section id="about" className="section">
-      <h2 className="section-title">About <span className="gradient-text">Me</span></h2>
+      <h2 className="section-title">
+        <ScrollReveal>About <span className="gradient-text">Me</span></ScrollReveal>
+      </h2>
       <div className="about-grid">
-        <div className="about-text glass">
-          <p>
-            I focus on backend-first full-stack development, especially Laravel applications that need clear workflows, role permissions, and maintainable code.
-          </p>
-          <p>
-            My work covers API design, database modeling, admin tooling, and practical React implementation. I prioritize software that teams can ship and maintain with confidence.
-          </p>
-        </div>
+        <ScrollReveal delay={100}>
+          <div className="about-text glass">
+            <p>
+              I focus on backend-first full-stack development, especially Laravel applications that need clear workflows, role permissions, and maintainable code.
+            </p>
+            <p>
+              My work covers API design, database modeling, admin tooling, and practical React implementation. I prioritize software that teams can ship and maintain with confidence.
+            </p>
+          </div>
+        </ScrollReveal>
         <div className="skills-grid">
           {skills.map((skill, index) => (
-            <div className="skill-card glass" key={index}>
-              <div className="skill-icon">{skill.icon}</div>
-              <h3>{skill.name}</h3>
-              <p>{skill.description}</p>
-            </div>
+            <ScrollReveal key={index} delay={200 + index * 100}>
+              <div className="skill-card glass">
+                <div className="skill-icon">{skill.icon}</div>
+                <h3>{skill.name}</h3>
+                <p>{skill.description}</p>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
 
       <div className="tech-stack-section">
-        <h3 className="tech-stack-title">My <span className="gradient-text">Tech Stack</span></h3>
+        <h3 className="tech-stack-title">
+          <ScrollReveal>My <span className="gradient-text">Tech Stack</span></ScrollReveal>
+        </h3>
         <div className="tech-groups">
           {techGroups.map((group, i) => (
-            <div className="tech-group" key={i}>
-              <h4 className="tech-group-label">{group.group}</h4>
-              <div className="tech-group-items">
-                {group.items.map((item, j) => {
-                  const IconComponent = techItemIcons[item] || Code2;
-                  return (
-                    <Chip
-                      key={j}
-                      label={item}
-                      icon={<IconComponent size={16} />}
-                      size="small"
-                      sx={techChipSx}
-                    />
-                  );
-                })}
+            <ScrollReveal key={i} delay={400 + i * 150}>
+              <div className="tech-group">
+                <h4 className="tech-group-label">{group.group}</h4>
+                <div className="tech-group-items">
+                  {group.items.map((item, j) => {
+                    const IconComponent = techItemIcons[item] || Code2;
+                    return (
+                      <Chip
+                        key={j}
+                        label={item}
+                        icon={<IconComponent size={16} />}
+                        size="small"
+                        sx={techChipSx}
+                      />
+                    );
+                  })}
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

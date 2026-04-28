@@ -381,23 +381,29 @@
    Responsive: Mobile (Side-by-Side Layout)
    ═══════════════════════════════════════ */
 @media (max-width: 768px) {
-  .hero { padding-top: 5rem; padding-left: var(--space-4); padding-right: var(--space-4); }
-  
-  .hero-split {
-    flex-direction: row; 
-    text-align: left; 
-    gap: 1.5rem; 
-    align-items: center; 
+  .hero { 
+    padding-top: 5rem; 
+    padding-left: var(--space-4); 
+    padding-right: var(--space-4); 
+    justify-content: flex-start;
+    min-height: auto;
   }
   
-  .hero-text { order: 1; }
+  .hero-split {
+    flex-direction: column; 
+    text-align: left; 
+    gap: 1.5rem; 
+    align-items: center;
+  }
+  
+  .hero-text { order: 2; text-align: center; width: 100%; }
   
   .hero-portrait-wrapper { 
-    order: 2; 
-    flex: 0 0 160px; 
-    width: 160px; 
-    height: 160px; 
-    margin-bottom: 0;
+    order: 1; 
+    flex: 0 0 140px; 
+    width: 140px; 
+    height: 140px; 
+    margin: 0 auto var(--space-4);
   }
   
   .title { font-size: 1.8rem; margin-bottom: 0.8rem; }
@@ -417,7 +423,7 @@
   }
   
   .hero-badge { margin: 0 0 1rem 0; font-size: 0.75rem; padding: 0.3rem 0.8rem; }
-  .hero-actions { gap: 1rem; justify-content: flex-start; }
+  .hero-actions { justify-content: center; }
   .btn { padding: 0.7rem 1.2rem; font-size: 0.9rem; }
   
   .hero-canvas-label { bottom: -24px; font-size: 0.65rem; }
@@ -428,34 +434,62 @@
 @media (max-width: 480px) {
   .hero { padding-top: 4.5rem; padding-left: var(--space-3); padding-right: var(--space-3); }
   
-  .hero-split {
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-  }
+  .hero-split { gap: 1rem; }
   
   .hero-portrait-wrapper { 
     flex: 0 0 110px; 
     width: 110px; 
     height: 110px; 
-    margin-bottom: 0;
   }
   
-  .title { font-size: 1.35rem; margin-bottom: 0.5rem; }
+  .title { font-size: 1.4rem; margin-bottom: 0.5rem; }
   .role-line { font-size: 0.75rem; letter-spacing: -0.2px; margin-bottom: 0.4rem; }
   .description { font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.6rem; }
   .hero-cred { font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.8rem; display: none; }
   .hero-badge { font-size: 0.65rem; padding: 0.2rem 0.5rem; margin-bottom: 0.6rem; }
   
-  .hero-actions { gap: 0.5rem; flex-wrap: wrap; flex-direction: row; width: 100%; justify-content: flex-start; }
-  .btn { width: auto; justify-content: center; padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+  .hero-actions { gap: 0.5rem; }
+  .btn { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
   
-  .hero-canvas-label { display: none; }
+  .hero-canvas-label { font-size: 0.6rem; bottom: -20px; }
   .proof-strip { margin-top: var(--space-4); gap: var(--space-2); }
   .proof-strip span { font-size: 0.65rem; }
   
-  /* Show bg code on small screens but keep it subtle */
-  .hero-bg-code { display: block; opacity: 0.04; }
+  .hero-bg-code { display: block; }
+}
+
+/* iPhone 12 Pro / Small phones */
+@media (max-width: 400px) {
+  .hero {
+    padding-top: 4rem;
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+  }
+  
+  .hero-split {
+    gap: 0.75rem;
+  }
+  
+  .hero-portrait-wrapper {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
+  }
+  .role-line { font-size: 0.7rem; margin-bottom: 0.3rem; }
+  .description { font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.5rem; }
+  .hero-cred { display: none; }
+  .hero-badge { font-size: 0.6rem; padding: 0.15rem 0.4rem; margin-bottom: 0.5rem; }
+  
+  .hero-actions { gap: 0.4rem; flex-wrap: wrap; }
+  .btn { padding: 0.45rem 0.7rem; font-size: 0.75rem; }
+  
+  .proof-strip { display: none; }
 }
 
 /* ═══════════════════════════════════════

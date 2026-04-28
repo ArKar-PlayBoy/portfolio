@@ -146,7 +146,7 @@ const Hero = () => {
 
   /* ── Trigger hero entrance after a short mount delay ── */
   useEffect(() => {
-    const timer = setTimeout(() => setHeroReady(true), 100);
+    const timer = setTimeout(() => setHeroReady(true), 150);
     return () => clearTimeout(timer);
   }, []);
 

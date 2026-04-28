@@ -103,3 +103,40 @@
     margin-bottom: var(--space-8);
   }
 }
+
+@media (max-width: 400px) {
+  .contact-grid {
+    gap: var(--space-8);
+  }
+  .contact-info {
+    padding: var(--space-6);
+  }
+  .contact-ctas {
+    padding: var(--space-6);
+  }
+  .contact-info h3 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-3);
+  }
+  .contact-description {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-6);
+    line-height: 1.6;
+  }
+  .contact-methods {
+    gap: var(--space-5);
+  }
+  .method {
+    gap: var(--space-4);
+  }
+  .method h4 {
+    font-size: var(--text-base);
+  }
+  .method p {
+    font-size: 0.8rem;
+  }
+  .cta-link {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-sm);
+  }
+}

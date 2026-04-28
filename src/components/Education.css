@@ -88,3 +88,43 @@
     padding: var(--space-6);
   }
 }
+
+@media (max-width: 400px) {
+  .education-list {
+    gap: var(--space-4);
+  }
+
+  .education-list::before {
+    left: 8px;
+  }
+
+  .education-item {
+    padding-left: var(--space-6);
+  }
+
+  .education-marker {
+    left: 2px;
+    top: var(--space-6);
+    width: 12px;
+    height: 12px;
+  }
+
+  .education-card {
+    padding: var(--space-5);
+  }
+
+  .education-degree {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-1);
+  }
+
+  .education-school {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-2);
+  }
+
+  .education-year {
+    font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-2);
+  }
+}
