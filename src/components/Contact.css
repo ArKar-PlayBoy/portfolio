@@ -4,6 +4,16 @@
   gap: var(--space-12);
 }
 
+.contact-grid .scroll-reveal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-grid .scroll-reveal > * {
+  flex: 1;
+}
+
 .contact-info {
   padding: var(--space-12);
   border-radius: var(--radius-xl);

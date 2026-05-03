@@ -26,7 +26,16 @@
   gap: var(--space-6);
 }
 
+.skills-grid .scroll-reveal {
+  height: 100%;
+  display: flex;
+}
+
 .skill-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
   padding: var(--space-8);
   border-radius: var(--radius-xl);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
